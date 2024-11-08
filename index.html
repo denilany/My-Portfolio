@@ -1,0 +1,186 @@
+<html><head><base href="." />
+  <title>Denil - Software Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body data-theme="dark">
+  
+  <nav class="navbar">
+    <div class="logo">
+      <h2>Denil</h2>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+      </svg>
+    </button>
+  </nav>
+  
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Denil</h1>
+      <div class="typewriter" id="typewriter"></div>
+      <p>Crafting secure and user-friendly software solutions with modern technologies.</p>
+      <a href="#contact" class="cta-button">Let's Connect</a>
+    </div>
+    <div class="hero-image">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="var(--accent)" d="M45.7,-77.8C58.9,-69.3,69.3,-55.1,76.3,-39.7C83.4,-24.3,87.1,-7.7,85.1,8.2C83.1,24.1,75.4,39.2,64.4,50.8C53.4,62.4,39.1,70.5,23.7,75.4C8.3,80.3,-8.1,82,-23.9,78.1C-39.7,74.2,-54.8,64.7,-65.8,51.8C-76.8,38.9,-83.6,22.6,-85.7,5.5C-87.8,-11.7,-85.2,-29.7,-76.3,-44.1C-67.4,-58.5,-52.3,-69.3,-36.9,-76.4C-21.5,-83.5,-5.4,-86.9,10.3,-84.8C26,-82.7,52,-86.2,45.7,-77.8Z" transform="translate(100 100)" />
+      </svg>
+    </div>
+  </section>
+  
+  <section id="about" class="about-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a passionate software developer with expertise in building secure and user-friendly applications. With a strong foundation in Go, JavaScript, and modern development tools, I strive to create efficient and scalable solutions.</p>
+        <p>My journey in software development has been driven by a constant desire to learn and grow, while maintaining a strong focus on security best practices and user experience.</p>
+        <a href="#" class="cta-button">Download Resume</a>
+      </div>
+      <div class="about-image">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--secondary)" d="M47.5,-73.8C62.9,-67.3,77.5,-56.3,85.8,-41.6C94.1,-26.9,96.1,-8.5,91.8,8.1C87.5,24.7,77,39.5,64.4,51.6C51.8,63.7,37.2,73.1,21.2,77.6C5.2,82.1,-12.1,81.7,-27.4,75.9C-42.7,70.1,-56,58.9,-65.8,45.1C-75.6,31.3,-81.9,15.7,-82.4,-0.3C-82.9,-16.3,-77.6,-32.5,-67.7,-45.2C-57.8,-57.9,-43.3,-67,-28.9,-73.7C-14.5,-80.4,-0.2,-84.7,13.5,-82.8C27.2,-80.9,54.4,-72.9,47.5,-73.8Z" transform="translate(100 100)" />
+        </svg>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-toggle">
+      <button class="toggle-btn active" data-target="languages">Languages</button>
+      <button class="toggle-btn" data-target="tools">Tools</button>
+    </div>
+    <div class="skills-grid" id="languages-grid">
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24">
+          <path d="M3.89 15.672L6.255 17.5h11.49l2.365-1.828L21 16.5v-7l-.89-1.828L17.745 6.5H6.255L3.89 8.328 3 9.5v7l.89 1.172zm17.45-7.343l-.655 1.343L18 11.5v1l2.685 1.828.655 1.343v2.657l-2.685-1.828L16 15.5h-4c-.199 0-.367-.118-.463-.303L9.89 12.5l1.647-2.697c.096-.185.264-.303.463-.303h4l2.685-1.828.655-1.343V3.672L16.685 5.5 14 6.5h-4c-.199 0-.367.118-.463.303L7.89 9.5 6 11.5v1l1.89 2 1.647 2.697c.096.185.264.303.463.303h4l2.685 1.828.655 1.343v2.657l-2.685-1.828L12 20.5H8c-.199 0-.367-.118-.463-.303L5.89 17.5 4 15.5v-1l1.89-2 1.647-2.697c.096-.185.264-.303.463-.303h4l2.685-1.828.655-1.343V4.672z"/>
+        </svg>
+        <h3>Golang</h3>
+      </div>
+      <!-- Add more language cards -->
+    </div>
+    <div class="skills-grid hidden" id="tools-grid">
+      <div class="skill-card">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        <h3>Git</h3>
+      </div>
+      <!-- Add more tool cards -->
+    </div>
+  </section>
+  
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Project Name</h3>
+        <p>A brief description of the project and the technologies used in its development.</p>
+        <div class="project-links">
+          <a href="https://github.com" class="cta-button">GitHub</a>
+          <a href="https://demo.com" class="cta-button">Live Demo</a>
+        </div>
+      </div>
+      <!-- Add more project cards -->
+    </div>
+  </section>
+  
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Contact</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="cta-button">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="https://github.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+      <a href="https://linkedin.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+    </div>
+  </section>
+  
+  <script>
+  const phrases = ['Software Developer', 'Security Enthusiast', 'Golang Expert'];
+  let currentPhrase = 0;
+  let currentChar = 0;
+  let isDeleting = false;
+  let isPaused = false;
+  
+  function typeWriter() {
+    const element = document.getElementById('typewriter');
+    const phrase = phrases[currentPhrase];
+    
+    if (!isDeleting && currentChar <= phrase.length) {
+      element.textContent = phrase.substring(0, currentChar);
+      currentChar++;
+      setTimeout(typeWriter, 100);
+    } else if (isDeleting && currentChar >= 0) {
+      element.textContent = phrase.substring(0, currentChar);
+      currentChar--;
+      setTimeout(typeWriter, 50);
+    } else if (!isPaused) {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        isPaused = true;
+        setTimeout(() => {
+          isPaused = false;
+          typeWriter();
+        }, 1000);
+      } else {
+        typeWriter();
+      }
+    }
+  }
+  
+  document.querySelector('.theme-toggle').addEventListener('click', () => {
+    const currentTheme = document.body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', newTheme);
+  });
+  
+  // Skills toggle functionality
+  document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Add active class to clicked button
+      button.classList.add('active');
+      
+      // Hide all grids
+      document.querySelectorAll('.skills-grid').forEach(grid => {
+        grid.classList.add('hidden');
+      });
+      
+      // Show the target grid
+      const targetGrid = document.getElementById(`${button.dataset.target}-grid`);
+      targetGrid.classList.remove('hidden');
+    });
+  });
+  
+  typeWriter();
+  </script>
+  
+  </body></html>
