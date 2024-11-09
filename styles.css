@@ -151,14 +151,15 @@
     margin-bottom: 2rem;
     position: relative;
     display: inline-block;
+    text-align: center;
   }
   
   .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 60px;
+    left: 46%;
+    width: 100px;
     height: 4px;
     background: linear-gradient(to right, var(--accent), var(--secondary));
   }
