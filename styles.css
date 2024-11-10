@@ -83,6 +83,10 @@
     padding: 0 5%;
     gap: 2rem;
   }
+
+  .hero-image img {
+    border-radius: 50%;
+  }
   
   .hero-text h1 {
     font-family: 'Poppins', sans-serif;
@@ -240,15 +244,39 @@
   }
   
   .project-card {
-    padding: 2rem;
-    border-radius: 15px;
-    background: linear-gradient(145deg, var(--background), rgba(255,255,255,0.05));
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
   }
   
-  .project-card:hover {
-    transform: translateY(-5px);
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.1);
   }
   
   .project-card h3 {
@@ -263,7 +291,7 @@
   }
   
   .contact-form {
-    max-width: 600px;
+    width: 40vw ;
     margin: 0 auto;
   }
   
@@ -280,7 +308,7 @@
   .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--accent);
     border-radius: 8px;
     background-color: rgba(255,255,255,0.1);
     color: var(--text);
