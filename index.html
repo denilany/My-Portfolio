@@ -11,6 +11,11 @@
     <div class="logo">
       <h2>Denil</h2>
     </div>
+
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -32,7 +37,7 @@
       <a href="#contact" class="cta-button">Let's Connect</a>
     </div>
     <div class="hero-image">
-      <img src="static/profile.JPG" alt="Professional headshot of Denil, smiling, modern photography style" width="400" height="400">
+      <img src="static/profile.JPG" alt="Professional headshot of Denil, smiling, modern photography style" width="600" height="600">
     </div>
   </section>
   
@@ -288,66 +293,70 @@
   </section>
   
   <script>
-  const phrases = ['Software Developer', 'Security Enthusiast', 'Golang Expert'];
-  let currentPhrase = 0;
-  let currentChar = 0;
-  let isDeleting = false;
-  let isPaused = false;
-  
-  function typeWriter() {
-    const element = document.getElementById('typewriter');
-    const phrase = phrases[currentPhrase];
+    document.querySelector('.navbar-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+
+    const phrases = ['Software Developer', 'Security Enthusiast', 'Golang Expert'];
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    let isPaused = false;
     
-    if (!isDeleting && currentChar <= phrase.length) {
-      element.textContent = phrase.substring(0, currentChar);
-      currentChar++;
-      setTimeout(typeWriter, 100);
-    } else if (isDeleting && currentChar >= 0) {
-      element.textContent = phrase.substring(0, currentChar);
-      currentChar--;
-      setTimeout(typeWriter, 50);
-    } else if (!isPaused) {
-      isDeleting = !isDeleting;
-      if (!isDeleting) {
-        currentPhrase = (currentPhrase + 1) % phrases.length;
-        isPaused = true;
-        setTimeout(() => {
-          isPaused = false;
+    function typeWriter() {
+      const element = document.getElementById('typewriter');
+      const phrase = phrases[currentPhrase];
+      
+      if (!isDeleting && currentChar <= phrase.length) {
+        element.textContent = phrase.substring(0, currentChar);
+        currentChar++;
+        setTimeout(typeWriter, 100);
+      } else if (isDeleting && currentChar >= 0) {
+        element.textContent = phrase.substring(0, currentChar);
+        currentChar--;
+        setTimeout(typeWriter, 50);
+      } else if (!isPaused) {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+          isPaused = true;
+          setTimeout(() => {
+            isPaused = false;
+            typeWriter();
+          }, 1000);
+        } else {
           typeWriter();
-        }, 1000);
-      } else {
-        typeWriter();
+        }
       }
     }
-  }
-  
-  document.querySelector('.theme-toggle').addEventListener('click', () => {
-    const currentTheme = document.body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.body.setAttribute('data-theme', newTheme);
-  });
-  
-  // Skills toggle functionality
-  document.querySelectorAll('.toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove active class from all buttons
-      document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      
-      // Add active class to clicked button
-      button.classList.add('active');
-      
-      // Hide all grids
-      document.querySelectorAll('.skills-grid').forEach(grid => {
-        grid.classList.add('hidden');
-      });
-      
-      // Show the target grid
-      const targetGrid = document.getElementById(`${button.dataset.target}-grid`);
-      targetGrid.classList.remove('hidden');
+    
+    document.querySelector('.theme-toggle').addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
     });
-  });
+    
+    // Skills toggle functionality
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Hide all grids
+        document.querySelectorAll('.skills-grid').forEach(grid => {
+          grid.classList.add('hidden');
+        });
+        
+        // Show the target grid
+        const targetGrid = document.getElementById(`${button.dataset.target}-grid`);
+        targetGrid.classList.remove('hidden');
+      });
+    });
 
   // Lazy loading for images
     document.addEventListener('DOMContentLoaded', () => {
